@@ -12,8 +12,11 @@ import { produce } from 'immer'
 import { keyBy } from 'lodash'
 import { toast } from 'react-toastify'
 import { AppContext } from 'src/contexts/app.context'
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 
 export default function Cart() {
+  const stripe = useStripe()
+  const elements = useElements()
   const { extendedPurchases, setExtendedPurchases } = useContext(AppContext)
   const { data: purchaseInCartData, refetch } = useQuery({
     queryKey: ['purchases', { status: purchasesStatus.inCart }],
@@ -143,6 +146,11 @@ export default function Cart() {
       }))
       buyProductsMutation.mutate(body)
     }
+  }
+
+  const paymentHandler = async (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.preventDefault()
+    if (!stripe || !elements) return
   }
 
   return (
@@ -299,6 +307,16 @@ export default function Cart() {
                   Mua hàng
                 </Button>
               </div>
+            </div>
+            <div className='sticky bottom-0 z-10 flex items-center justify-between rounded-sm border border-gray-100 bg-white p-5 shadow'>
+              <CardElement className='w-1/2' />
+              <Button
+                onClick={paymentHandler}
+                disabled={buyProductsMutation.isLoading}
+                className='ml-4 flex h-10 w-52 items-center justify-center bg-emerald-300 text-sm uppercase text-white hover:bg-emerald-400'
+              >
+                stripe
+              </Button>
             </div>
           </>
         ) : (
