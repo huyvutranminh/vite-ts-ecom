@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { omit } from 'lodash'
+import omit from 'lodash/omit'
 import { createSearchParams, useNavigate } from 'react-router-dom'
 import { Props } from 'src/components/Pagination/Pagination'
 import path from 'src/constants/path'

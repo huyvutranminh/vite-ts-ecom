@@ -1,5 +1,5 @@
 import { useMutation, useQuery } from '@tanstack/react-query'
-import { useContext, useEffect, useMemo } from 'react'
+import { useContext, useEffect, useMemo, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import purchaseApi from 'src/apis/purchase.api'
 import Button from 'src/components/Button'
@@ -9,15 +9,18 @@ import { purchasesStatus } from 'src/constants/purchase'
 import { Purchase } from 'src/types/purchase.type'
 import { formatCurrency, generateNameId } from 'src/utils/utils'
 import { produce } from 'immer'
-import { keyBy } from 'lodash'
+import keyBy from 'lodash/keyBy'
 import { toast } from 'react-toastify'
 import { AppContext } from 'src/contexts/app.context'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
+// eslint-disable-next-line import/named
+import { StripeCardElement } from '@stripe/stripe-js'
 
 export default function Cart() {
+  const [isProcessingPayment, setIsProcessingPayment] = useState(false)
   const stripe = useStripe()
   const elements = useElements()
-  const { extendedPurchases, setExtendedPurchases } = useContext(AppContext)
+  const { extendedPurchases, setExtendedPurchases, profile } = useContext(AppContext)
   const { data: purchaseInCartData, refetch } = useQuery({
     queryKey: ['purchases', { status: purchasesStatus.inCart }],
     queryFn: () => purchaseApi.getPurchaseList({ status: purchasesStatus.inCart })
@@ -148,9 +151,41 @@ export default function Cart() {
     }
   }
 
-  const paymentHandler = async (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    event.preventDefault()
-    if (!stripe || !elements) return
+  const paymentHandler = async () => {
+    if (!stripe || !elements || checkedPurchases.length <= 0) return
+
+    setIsProcessingPayment(true)
+
+    const response = await fetch('/.netlify/functions/create-payment-intent', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ amount: (totalCheckedPurchasePrice / 240).toFixed(0) })
+    }).then((res) => res.json())
+
+    const {
+      paymentIntent: { client_secret }
+    } = response
+
+    const paymentResult = await stripe.confirmCardPayment(client_secret, {
+      payment_method: {
+        card: elements.getElement(CardElement) as StripeCardElement,
+        billing_details: {
+          name: profile?.name || 'Guest'
+        }
+      }
+    })
+
+    setIsProcessingPayment(false)
+
+    if (paymentResult.error) {
+      alert(paymentResult.error)
+    } else {
+      if (paymentResult.paymentIntent.status == 'succeeded') {
+        handleBuyPurchases()
+      }
+    }
   }
 
   return (
@@ -301,7 +336,7 @@ export default function Cart() {
                 </div>
                 <Button
                   onClick={handleBuyPurchases}
-                  disabled={buyProductsMutation.isLoading}
+                  disabled={buyProductsMutation.isLoading || isProcessingPayment}
                   className='ml-4 flex h-10 w-52 items-center justify-center bg-emerald-300 text-sm uppercase text-white hover:bg-emerald-400'
                 >
                   Mua hàng
@@ -312,7 +347,7 @@ export default function Cart() {
               <CardElement className='w-1/2' />
               <Button
                 onClick={paymentHandler}
-                disabled={buyProductsMutation.isLoading}
+                disabled={isProcessingPayment || buyProductsMutation.isLoading}
                 className='ml-4 flex h-10 w-52 items-center justify-center bg-emerald-300 text-sm uppercase text-white hover:bg-emerald-400'
               >
                 stripe

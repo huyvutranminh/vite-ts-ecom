@@ -1,0 +1,707 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Product Detail > Render UI ProductDetail 1`] = `
+<body>
+  <div>
+    <div>
+      <div
+        class="bg-[linear-gradient(-180deg,#20BF55,#01BAEF)] pb-5 pt-2 text-white"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="flex justify-end"
+          >
+            <div
+              class="flex cursor-pointer items-center py-1 hover:text-white/70"
+            >
+              <svg
+                class="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span
+                class="mx-1"
+              >
+                Tiếng Việt
+              </span>
+              <svg
+                class="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex items-center"
+            >
+              <a
+                class="mx-3 capitalize hover:text-white/70"
+                href="/register"
+              >
+                Đăng ký
+              </a>
+              <div
+                class="h-4 border-r-[1px] border-r-white/40"
+              />
+              <a
+                class="mx-3 capitalize hover:text-white/70"
+                href="/login"
+              >
+                Đăng nhập
+              </a>
+            </div>
+          </div>
+          <div
+            class="mt-4 grid grid-cols-12 items-end gap-4"
+          >
+            <a
+              class="col-span-2"
+              href="/"
+            >
+              <img
+                alt="logo"
+                class="w-1/2"
+                src="/src/assets/icons8-react.svg"
+              />
+            </a>
+            <form
+              class="col-span-9"
+            >
+              <div
+                class="flex rounded-sm bg-white p-1"
+              >
+                <input
+                  class="flex-grow border-none bg-transparent px-3 py-2 text-black outline-none"
+                  name="name"
+                  placeholder="Free Ship Đơn Từ 0Đ"
+                  type="text"
+                />
+                <button
+                  class="flex-shrink-0 rounded-sm bg-emerald-400 py-2 px-6 hover:opacity-90"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <div
+              class="col-span-1 justify-self-end"
+            >
+              <div>
+                <a
+                  class="relative"
+                  href="/cart"
+                >
+                  <svg
+                    class="h-8 w-8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-gray-200 py-6"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="bg-white p-4 shadow"
+          >
+            <div
+              class="grid grid-cols-12 gap-9"
+            >
+              <div
+                class="col-span-5"
+              >
+                <div
+                  class="relative  w-full cursor-zoom-in overflow-hidden pt-[100%] shadow"
+                >
+                  <img
+                    alt="Điện thoại Apple Iphone 12 64GB - Hàng chính hãng VNA"
+                    class="pointer-events-none absolute top-0 left-0 h-full w-full bg-white object-cover transition-transform duration-300 group-hover:scale-125"
+                    src="https://api-ecom.duthanhduoc.com/images/a7fb7a18-743a-42bb-bead-36370c1d1aba.jpg"
+                  />
+                </div>
+                <div
+                  class="relative mt-4 grid grid-cols-5 gap-1"
+                >
+                  <button
+                    class="absolute left-0 top-1/2 z-10 h-9 w-5 -translate-y-1/2 bg-black/20 text-white"
+                  >
+                    <svg
+                      class="h-5 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.75 19.5L8.25 12l7.5-7.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    class="relative w-full pt-[100%]"
+                  >
+                    <img
+                      alt="Điện thoại Apple Iphone 12 64GB - Hàng chính hãng VNA"
+                      class="absolute top-0 left-0 h-full w-full cursor-pointer bg-white object-cover transition-transform duration-300 group-hover:scale-125"
+                      src="https://api-ecom.duthanhduoc.com/images/a7fb7a18-743a-42bb-bead-36370c1d1aba.jpg"
+                    />
+                    <div
+                      class="absolute inset-0 border-2 border-emerald-300"
+                    />
+                  </div>
+                  <div
+                    class="relative w-full pt-[100%]"
+                  >
+                    <img
+                      alt="Điện thoại Apple Iphone 12 64GB - Hàng chính hãng VNA"
+                      class="absolute top-0 left-0 h-full w-full cursor-pointer bg-white object-cover transition-transform duration-300 group-hover:scale-125"
+                      src="https://api-ecom.duthanhduoc.com/images/b09ff60d-c6bd-4d3a-b778-0fc2708a65fb.jpg"
+                    />
+                  </div>
+                  <div
+                    class="relative w-full pt-[100%]"
+                  >
+                    <img
+                      alt="Điện thoại Apple Iphone 12 64GB - Hàng chính hãng VNA"
+                      class="absolute top-0 left-0 h-full w-full cursor-pointer bg-white object-cover transition-transform duration-300 group-hover:scale-125"
+                      src="https://api-ecom.duthanhduoc.com/images/fc5ecd4c-47eb-4f12-ae82-ef26fd492887.jpg"
+                    />
+                  </div>
+                  <div
+                    class="relative w-full pt-[100%]"
+                  >
+                    <img
+                      alt="Điện thoại Apple Iphone 12 64GB - Hàng chính hãng VNA"
+                      class="absolute top-0 left-0 h-full w-full cursor-pointer bg-white object-cover transition-transform duration-300 group-hover:scale-125"
+                      src="https://api-ecom.duthanhduoc.com/images/a87f854d-37a9-4252-a2f7-243fc21f8b55.jpg"
+                    />
+                  </div>
+                  <div
+                    class="relative w-full pt-[100%]"
+                  >
+                    <img
+                      alt="Điện thoại Apple Iphone 12 64GB - Hàng chính hãng VNA"
+                      class="absolute top-0 left-0 h-full w-full cursor-pointer bg-white object-cover transition-transform duration-300 group-hover:scale-125"
+                      src="https://api-ecom.duthanhduoc.com/images/3ecf878d-6742-43d4-abe7-044c15c84120.jpg"
+                    />
+                  </div>
+                  <button
+                    class="absolute right-0 top-1/2 z-10 h-9 w-5 -translate-y-1/2 bg-black/20 text-white"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="col-span-7"
+              >
+                <h1
+                  class="text-xl font-medium uppercase"
+                >
+                  Điện thoại Apple Iphone 12 64GB - Hàng chính hãng VNA
+                </h1>
+                <div
+                  class="mt-8 flex items-center"
+                >
+                  <div
+                    class="flex items-center"
+                  >
+                    <span
+                      class="mr-1 border-b border-b-orange text-orange"
+                    >
+                      5
+                    </span>
+                    <div
+                      class="flex items-center"
+                    >
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="absolute top-0 left-0 h-full overflow-hidden"
+                          style="width: 100%;"
+                        >
+                          <svg
+                            class="fill-orange text-orange w-4 h-4"
+                            enable-background="new 0 0 15 15"
+                            viewBox="0 0 15 15"
+                            x="0"
+                            y="0"
+                          >
+                            <polygon
+                              points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                            />
+                          </svg>
+                        </div>
+                        <svg
+                          class="fill-gray-300 text-gray-300 w-4 h-4"
+                          enable-background="new 0 0 15 15"
+                          viewBox="0 0 15 15"
+                          x="0"
+                          y="0"
+                        >
+                          <polygon
+                            points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="absolute top-0 left-0 h-full overflow-hidden"
+                          style="width: 100%;"
+                        >
+                          <svg
+                            class="fill-orange text-orange w-4 h-4"
+                            enable-background="new 0 0 15 15"
+                            viewBox="0 0 15 15"
+                            x="0"
+                            y="0"
+                          >
+                            <polygon
+                              points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                            />
+                          </svg>
+                        </div>
+                        <svg
+                          class="fill-gray-300 text-gray-300 w-4 h-4"
+                          enable-background="new 0 0 15 15"
+                          viewBox="0 0 15 15"
+                          x="0"
+                          y="0"
+                        >
+                          <polygon
+                            points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="absolute top-0 left-0 h-full overflow-hidden"
+                          style="width: 100%;"
+                        >
+                          <svg
+                            class="fill-orange text-orange w-4 h-4"
+                            enable-background="new 0 0 15 15"
+                            viewBox="0 0 15 15"
+                            x="0"
+                            y="0"
+                          >
+                            <polygon
+                              points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                            />
+                          </svg>
+                        </div>
+                        <svg
+                          class="fill-gray-300 text-gray-300 w-4 h-4"
+                          enable-background="new 0 0 15 15"
+                          viewBox="0 0 15 15"
+                          x="0"
+                          y="0"
+                        >
+                          <polygon
+                            points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="absolute top-0 left-0 h-full overflow-hidden"
+                          style="width: 100%;"
+                        >
+                          <svg
+                            class="fill-orange text-orange w-4 h-4"
+                            enable-background="new 0 0 15 15"
+                            viewBox="0 0 15 15"
+                            x="0"
+                            y="0"
+                          >
+                            <polygon
+                              points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                            />
+                          </svg>
+                        </div>
+                        <svg
+                          class="fill-gray-300 text-gray-300 w-4 h-4"
+                          enable-background="new 0 0 15 15"
+                          viewBox="0 0 15 15"
+                          x="0"
+                          y="0"
+                        >
+                          <polygon
+                            points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="relative"
+                      >
+                        <div
+                          class="absolute top-0 left-0 h-full overflow-hidden"
+                          style="width: 100%;"
+                        >
+                          <svg
+                            class="fill-orange text-orange w-4 h-4"
+                            enable-background="new 0 0 15 15"
+                            viewBox="0 0 15 15"
+                            x="0"
+                            y="0"
+                          >
+                            <polygon
+                              points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                            />
+                          </svg>
+                        </div>
+                        <svg
+                          class="fill-gray-300 text-gray-300 w-4 h-4"
+                          enable-background="new 0 0 15 15"
+                          viewBox="0 0 15 15"
+                          x="0"
+                          y="0"
+                        >
+                          <polygon
+                            points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      class="mx-4 h-4 w-[1px] bg-gray-300"
+                    />
+                    <div
+                      class="text-sm"
+                    >
+                      <span>
+                        482
+                      </span>
+                      <span
+                        class="ml-1 text-gray-500"
+                      >
+                        Đã bán
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mt-8 flex items-center bg-gray-50 px-5 py-4"
+                >
+                  <div
+                    class="text-gray-500 line-through"
+                  >
+                    ₫
+                    26.990.000
+                  </div>
+                  <div
+                    class="ml-3 text-3xl font-medium text-emerald-300"
+                  >
+                    ₫
+                    20.990.000
+                  </div>
+                  <div
+                    class="ml-4 rounded-sm bg-emerald-300 px-1 py-[2px] text-xs font-semibold uppercase text-white"
+                  >
+                    22%
+                     giảm
+                  </div>
+                </div>
+                <div
+                  class="mt-8 flex items-center"
+                >
+                  <div
+                    class="capitalize text-gray-500"
+                  >
+                    Số lượng
+                  </div>
+                  <div
+                    class="flex items-center ml-10"
+                  >
+                    <button
+                      class="flex h-8 w-8 items-center justify-center rounded-l-sm border border-gray-300 text-gray-600"
+                    >
+                      <svg
+                        class="h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.5 12h-15"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <div
+                      class=""
+                    >
+                      <input
+                        class="h-8 w-14 border-t border-b border-gray-300 p-1 text-center outline-none"
+                        value="1"
+                      />
+                      <div
+                        class="hidden"
+                      />
+                    </div>
+                    <button
+                      class="flex h-8 w-8 items-center justify-center rounded-l-sm border border-gray-300 text-gray-600"
+                    >
+                      <svg
+                        class="h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 4.5v15m7.5-7.5h-15"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div
+                    class="ml-6 text-sm text-gray-500"
+                  >
+                    17
+                     
+                    Sản phẩm có sẵn
+                  </div>
+                </div>
+                <div
+                  class="mt-8 flex items-center"
+                >
+                  <button
+                    class="flex h-12 items-center justify-center rounded-sm border border-emerald-200 bg-emerald-100 px-5 capitalize text-emerald-600 shadow-sm hover:bg-emerald-50"
+                  >
+                    <svg
+                      class="mr-[10px] h-5 w-5 fill-current stroke-emerald-600 text-emerald-600"
+                      enable-background="new 0 0 15 15"
+                      viewBox="0 0 15 15"
+                      x="0"
+                      y="0"
+                    >
+                      <g>
+                        <g>
+                          <polyline
+                            fill="none"
+                            points=".5 .5 2.7 .5 5.2 11 12.4 11 14.5 3.5 3.7 3.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                          />
+                          <circle
+                            cx="6"
+                            cy="13.5"
+                            r="1"
+                            stroke="none"
+                          />
+                          <circle
+                            cx="11.5"
+                            cy="13.5"
+                            r="1"
+                            stroke="none"
+                          />
+                        </g>
+                        <line
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                          x1="7.5"
+                          x2="10.5"
+                          y1="7"
+                          y2="7"
+                        />
+                        <line
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                          x1="9"
+                          x2="9"
+                          y1="8.5"
+                          y2="5.5"
+                        />
+                      </g>
+                    </svg>
+                    Thêm vào giỏ hàng
+                  </button>
+                  <button
+                    class="ml-4 flex h-12 min-w-[5rem] items-center justify-center rounded-sm border-emerald-200 bg-emerald-100 px-5 capitalize text-emerald-600 shadow-sm outline-none hover:bg-emerald-50"
+                  >
+                    Mua ngay
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="container"
+        >
+          <div
+            class="mt-8 bg-white p-4 shadow"
+          >
+            <div
+              class="rounded bg-gray-50 p-4 text-lg capitalize text-slate-700"
+            >
+              Mô tả sản phảm
+            </div>
+            <div
+              class="loading-loose mx-4 mt-12 mb-4 text-sm"
+            >
+              <div>
+                <p>
+                  Hàng Chính hãng mã VN/A, mới 100%, chưa kích hoạt
+                </p>
+                <p>
+                  iPhone 12 64GB- Sự nâng cấp chỉnh chu cho thế hệ tiền nhiệm
+                  <br />
+                  Màn hình iPhone 12 64GB - Nâng cấp đáng giá từ tấm nền OLED
+                  <br />
+                  Hai năm qua, Apple vẫn trung thành với tấm nền IPS LCD dành cho các phiên bản điện thoại giá rẻ. Trong đó, iPhone XR, iPhone 11 và thậm chí là SE 2020 là những đại diện tiêu biểu. Thế nhưng, điều này sẽ thay đổi khi mà giờ đây, thế hệ kế nhiệm đã được nâng cấp lên tấm nền OLED sắc nét.
+                </p>
+                <p>
+                  iPhone 12 64GB sở hữu màn hình 6,1 inch (tương tự XR và 11) với tấm nền OLED XDR tương tự các bản cao cấp. Ngoài ra, một điểm nổi bật không thể không nhắc đến chính là việc nâng cấp độ phân giải chuẩn HD+ vốn bị các fan đánh giá kém qua hai thế hệ lên chuẩn Full HD+. Do đó, Cupertino đã chính thức thay đổi điểm yếu cố hữu trên các phiên bản giá rẻ của hãng. Ngay cả bản 5,4 inch cũng được trang bị tấm nền OLED Super Retina.
+                </p>
+                <p>
+                  Ngoài ra, theo công bố của hãng, màn hình của thế hệ mới sẽ có độ sáng lên tới 1200 knits và hỗ trợ các công nghệ HDR và Dolby Vision. Đặc biệt, lớp kính sẽ được phủ một lớp “Ceramic Shield” giúp máy cứng cáp và sống sót cao hơn trong những tình huống “tiếp đất”.
+                </p>
+                <p>
+                  Thiết kế iPhone 12 64GB mang nét hoài cổ
+                  <br />
+                  Năm nay các sản phẩm “táo khuyết” đều sở hữu chung ngôn ngữ thiết kế. Đó là sự kết hợp giữa iPhone 11 và iPhone 5 với các cạnh viền được làm vuông vức hơn. Mặt trước vẫn là màn hình với notch “tai thỏ” chứa camera selfie và Face ID. Thiết kế này khiến series smartphone năm nay của nhà Táo trông sang trọng và mang dáng dấp hoài cổ từ ngôn ngữ thiết kế của thế hệ thứ 5 trước đây.
+                  <br />
+                  Còn mặt sau của máy vẫn sẽ là một cụm máy ảnh kép đặt trong khung vuông tương tự như thế hệ năm 2019. Do là bản tiêu chuẩn, thiết bị sẽ có khung làm từ nhôm thay vì bằng thép không gỉ như bản cao cấp.
+                </p>
+                <p>
+                  Hiệu năng iPhone 12 64GB mạnh mẽ
+                  <br />
+                  Cung cấp sức mạnh cho máy chính là chip A14 Bionic. Theo công bố của Cupertino, A14 là vi xử lý có tới 6 nhân CPU, chứa hơn 11,8 tỷ bóng bán dẫn, hứa hẹn sẽ cho hiệu năng hơn khoảng 40% so với A13. Điểm số benchmark của một mẫu máy cũng sở hữu chipset này là iPad Air 4 đã cho thấy A14 thật sự vượt trội. Điểm số đơn nhân 1583 va đa nhân là 4918, chỉ thua kém một chút so với A12Z trên iPad Pro 2020.
+                  <br />
+                  Ngoài ra, nhà Táo còn trang bị thêm chip U1 với băng tần rộng (ultra-wideband) cho phép định vị vị trí thông qua AirDrop và kết nối các thiết bị cùng hệ sinh thái trong gia đình
+                </p>
+                <p>
+                  Camera iPhone 12 64GB - Thay đổi đến từ bên trong 
+                  <br />
+                  Du là thế hệ kế nhiệm iPhone 11, thế nhưng thiết bị này không có cải tiến nhiều về máy ảnh. Máy vẫn sở hữu cụm camera kép với 2 cảm biến 12MP (1 góc rộng và 1 góc siêu rộng). Apple đã sắp xếp lại và bổ sung thêm thấu kính để cho chất lượng ảnh chụp trong và sắc nét hơn.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="Toastify"
+    />
+  </div>
+  <div
+    id=":r0:"
+  />
+  <div
+    id=":r1:"
+  />
+</body>
+`;

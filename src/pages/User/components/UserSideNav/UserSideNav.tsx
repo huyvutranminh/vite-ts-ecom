@@ -1,5 +1,6 @@
+import classNames from 'classnames'
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import path from 'src/constants/path'
 import { AppContext } from 'src/contexts/app.context'
 import { getAvatarUrl } from 'src/utils/utils'
@@ -37,7 +38,15 @@ export default function UserSideNav() {
         </div>
       </div>
       <div className='mt-7'>
-        <Link to={path.profile} className='flex  items-center capitalize text-gray-600 transition-colors'>
+        <NavLink
+          to={path.profile}
+          className={({ isActive }) =>
+            classNames('flex  items-center capitalize transition-colors', {
+              'text-emerald-300': isActive,
+              'text-gray-600': !isActive
+            })
+          }
+        >
           <div className='mr-3 h-[22px] w-[22px]'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -55,8 +64,16 @@ export default function UserSideNav() {
             </svg>
           </div>
           Tài khoản của tôi
-        </Link>
-        <Link to={path.changePassword} className='mt-4 flex items-center capitalize text-gray-600 transition-colors'>
+        </NavLink>
+        <NavLink
+          to={path.changePassword}
+          className={({ isActive }) =>
+            classNames('mt-4  flex items-center capitalize transition-colors', {
+              'text-emerald-300': isActive,
+              'text-gray-600': !isActive
+            })
+          }
+        >
           <div className='mr-3 h-[22px] w-[22px]'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -74,8 +91,16 @@ export default function UserSideNav() {
             </svg>
           </div>
           Đổi mật khẩu
-        </Link>
-        <Link to={path.purchaseHistory} className='mt-4 flex items-center capitalize text-gray-600 transition-colors'>
+        </NavLink>
+        <NavLink
+          to={path.purchaseHistory}
+          className={({ isActive }) =>
+            classNames('mt-4  flex items-center capitalize transition-colors', {
+              'text-emerald-300': isActive,
+              'text-gray-600': !isActive
+            })
+          }
+        >
           <div className='mr-3 h-[22px] w-[22px]'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -93,7 +118,7 @@ export default function UserSideNav() {
             </svg>
           </div>
           Đơn mua
-        </Link>
+        </NavLink>
       </div>
     </div>
   )

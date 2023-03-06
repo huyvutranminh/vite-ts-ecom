@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useMutation } from '@tanstack/react-query'
-import { omit } from 'lodash'
+import omit from 'lodash/omit'
 import { schema, Schema } from 'src/utils/rules'
 import Input from 'src/components/Input'
 import authApi from 'src/apis/auth.api'
@@ -11,6 +11,7 @@ import { ErrorResponse } from 'src/types/utils.type'
 import { useContext } from 'react'
 import { AppContext } from 'src/contexts/app.context'
 import Button from 'src/components/Button'
+import { Helmet } from 'react-helmet-async'
 
 type FormData = Pick<Schema, 'email' | 'password' | 'confirm_password'>
 const registerSchema = schema.pick(['email', 'password', 'confirm_password'])
@@ -67,6 +68,10 @@ export default function Register() {
 
   return (
     <div className='bg-emerald-400'>
+      <Helmet>
+        <title>Register</title>
+        <meta name='description' content='register page'></meta>
+      </Helmet>
       <div className='container'>
         <div className='grid grid-cols-1 py-12 lg:grid-cols-5 lg:py-32 lg:pr-10'>
           <div className='lg:col-span-2 lg:col-start-4'>
@@ -84,7 +89,7 @@ export default function Register() {
                 name='password'
                 register={register}
                 type='password'
-                className='mt-2'
+                className='relative mt-2'
                 errorMessage={errors.password?.message}
                 placeholder='Password'
                 autoComplete='on'
@@ -94,7 +99,7 @@ export default function Register() {
                 name='confirm_password'
                 register={register}
                 type='password'
-                className='mt-2'
+                className='relative mt-2'
                 errorMessage={errors.confirm_password?.message}
                 placeholder='Confirm Password'
                 autoComplete='on'

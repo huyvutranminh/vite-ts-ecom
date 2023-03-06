@@ -10,6 +10,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { NoUndefinedField } from 'src/types/utils.type'
 import RatingStars from 'src/components/RatingStars'
 import { QueryConfig } from 'src/hooks/useQueryConfig'
+import { useTranslation } from 'react-i18next'
 
 interface AsideFilterProps {
   categories: Category[]
@@ -19,6 +20,7 @@ interface AsideFilterProps {
 type FormData = NoUndefinedField<Pick<Schema, 'price_max' | 'price_min'>>
 
 export default function AsideFilter({ categories, queryConfig }: AsideFilterProps) {
+  const { t } = useTranslation('home')
   const activeCategory = queryConfig.category
 
   const isActiveCategory = (categoryId: string) => {
@@ -93,7 +95,7 @@ export default function AsideFilter({ categories, queryConfig }: AsideFilterProp
             </g>
           </g>
         </svg>
-        Tất cả danh mục
+        {t('aside filter.all categories')}
       </Link>
       <div className='my-4 h-[1px] bg-gray-300' />
       <ul>
@@ -142,7 +144,7 @@ export default function AsideFilter({ categories, queryConfig }: AsideFilterProp
             />
           </g>
         </svg>
-        Bộ lọc tìm kiếm
+        {t('aside filter.filter search')}
       </Link>
       <div className='my-4 h-[1px] bg-gray-300' />
       <div className='my-5'>
